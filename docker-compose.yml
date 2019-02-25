@@ -1,0 +1,21 @@
+version: '2.3'
+
+services:
+     nbody: 
+          build: samples/cudagl/ubuntu16.04/nbody 
+          runtime: nvidia
+          environment:
+               - DISPLAY
+          volumes:
+               - /tmp/.X11-unix:/tmp/.X11-unix
+     
+     peglgears:
+          build: samples/opengl/ubuntu16.04/peglgears
+          runtime: nvidia
+
+     nvsmi:
+          image: ubuntu:18.04
+          runtime: nvidia
+          environment:
+               - NVIDIA_VISIBLE_DEVICES=all
+          command: nvidia-smi
