@@ -1,0 +1,11 @@
+$ sudo nvidia-container-cli --load-kmods info
+
+NVRM version:   418.43
+CUDA version:   10.1
+
+Device Index:   0
+Device Minor:   0
+Model:          Quadro P2000
+GPU UUID:       GPU-18de9670-8ed8-08e1-b142-f7d8653b67a3
+Bus Location:   00000000:01:00.0
+Architecture:   6.1
